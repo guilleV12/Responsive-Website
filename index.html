@@ -19,6 +19,8 @@
   </head>
 
   <body>
+    <!--Form submitted-->
+    
 
     <!--Navbar-->
     <div class="navbar">
@@ -49,17 +51,20 @@
 
         <div class="showcase-form card">
           <h2>Request a Demo</h2>
-          <form name="contact" method="POST" data-netlify="true">
+          <form name="contact">
             <div class="form-control">
-              <input type="text" name="name" placeholder="Name" required>
+              <label for="name" >Enter your name</label>
+              <input type="text" name="name" id="name" placeholder="Name" >
             </div>
             <div class="form-control">
-              <input type="text" name="company" placeholder="Company Name" required>
+              <label for="company" >Enter your company name</label>
+              <input type="text" name="company" id="company" placeholder="Company Name" >
             </div>
             <div class="form-control">
-              <input type="text" name="email" placeholder="Email" required>
+              <label for="email" >Enter your contact email</label>
+              <input type="text" name="email" id="email" placeholder="Email" >
             </div>
-            <input type="submit" value="Send" class="btn btn-primary">
+            <button class="btn btn-primary">Send</button>
           </form>
         </div>
       </div>

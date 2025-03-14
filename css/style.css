@@ -22,6 +22,11 @@ body {
   overflow-x: hidden;
 }
 
+body.modal-active {
+  overflow: hidden;
+  pointer-events: none;
+}
+
 ul {
   list-style-type: none;
 }
@@ -123,6 +128,7 @@ pre {
 
 .showcase-form .form-control {
   margin: 30px 0;
+  position: relative;
 }
 
 .showcase-form input[type='text'],
@@ -300,6 +306,60 @@ pre {
 
 .fa-twitter:hover {
   color: #1C9CEA;
+}
+
+/*Form submitted*/
+.form-submitted {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  transition: opacity 0.3s ease-in-out; 
+}
+
+.form-submitted .card {
+  justify-content: center;
+  align-items: center;
+  z-index: 10001;
+  height: auto;
+  width: 30vw;
+  pointer-events: all;
+  animation: slideInFromTop 1s ease-in;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.close-modal i{
+  margin-right: 10px;
+}
+
+.form-submitted .card i {
+  margin-left: 5px;
+}
+
+.showcase-form input[type='text'].error,
+.showcase-form input[type='email'].error {
+  border-bottom: 1px solid rgb(218, 81, 81);
+}
+
+.showcase-form label {
+  display: none;
+}
+
+label.error-label {
+  color: rgb(218, 81, 81);
+  font-size: 12px;
+  position: absolute;
+  top: 4px;
+  right: 0;
+  display: flex;
 }
 
 /* Animations */
